@@ -1,0 +1,30 @@
+.new-tweet form {
+  border-bottom: red;
+}
+
+h3 {
+  justify-content: left;
+}
+
+.new-tweet textarea {
+  background-color: #f4f1ec;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.new-tweet div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-tweet input {
+  background-color: navy;
+  font-family: "Bungee", sans-serif;
+  color: white;
+  border-radius: 8px;
+}
