@@ -1,7 +1,7 @@
-header {
+header.pageHeader {
   height: 400px;
   width: 100%;
-  background-color: orange;
+  background-color: indianred;
   background-image: url("/images/asfalt-light.png");
   display: flex;
   justify-content: center;
@@ -9,6 +9,6 @@ header {
   flex-direction: column;
 }
 
-h2 {
-  margin: 12px;
+header.pageHeader h2 {
+  margin: 0 auto;
 }

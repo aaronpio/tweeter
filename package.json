@@ -8,6 +8,12 @@
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
   "author": "Lighthouse Labs",
   "license": "ISC",
   "dependencies": {
