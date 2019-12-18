@@ -36,6 +36,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div>
+        <p><b>Write</b> a new tweet</p>
+        <button class="scrollBtn" type="button">\/\/\/\/\/\/\/\/</button>
+      </div>
     </nav>
 
     <header class="pageHeader">
@@ -47,7 +51,7 @@
     <main class="container">
       <section class="new-tweet">
         <h3>Compose Tweet</h3>
-        <form method="POST" action="/tweets">
+        <form id="tweetForm">
           <textarea
             name="text"
             placeholder="What are you humming about?"

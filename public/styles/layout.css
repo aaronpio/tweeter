@@ -18,7 +18,7 @@ html {
  */
 
 body {
-  margin-top: 120px;
+  margin-top: 520px;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: -1;
 }
 
 .container {

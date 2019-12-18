@@ -27,11 +27,16 @@
   margin-bottom: 25px;
 }
 
+.new-tweet input:hover {
+  cursor: pointer;
+}
+
 article {
   margin-top: 50px;
   margin-bottom: 25px;
   border: 3px solid black;
   height: 225px;
+  overflow-wrap: break-word;
 }
 
 article:hover {
@@ -79,6 +84,8 @@ article main {
   width: 98%;
   font-size: 20px;
   height: 90px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 article footer {

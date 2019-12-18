@@ -11,7 +11,11 @@
   "eslintConfig": {
     "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "jquery": true
+    },
+    "globals": {
+      "$": true
     }
   },
   "author": "Lighthouse Labs",
@@ -23,6 +27,7 @@
     "md5": "^2.1.0"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
     "nodemon": "^1.9.2"
   }
 }
