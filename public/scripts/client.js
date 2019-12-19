@@ -93,6 +93,10 @@ $(document).ready(() => {
 
   //-----------------------------------------------------
 
+  $("#tweetForm").click(function() {
+    $("#errMsg").remove();
+  });
+
   $("#tweetForm").on("submit", function(event) {
     event.preventDefault();
     const charCountValue =
@@ -101,9 +105,13 @@ $(document).ready(() => {
         .serialize().length - 5;
 
     if (charCountValue > 140) {
-      alert("Your tweet is too long");
+      $(".container").prepend(
+        '<h5 id="errMsg">🚨 🚨 🚨 Your tweet is too long; Please condense and re-submit 🚨 🚨 🚨</h5>'
+      );
     } else if (charCountValue === 0) {
-      alert("You haven't entered a tweet");
+      $(".container").prepend(
+        '<h5 id="errMsg">🚨 🚨 🚨 You haven\'t entered a tweet; Please brainstorm and re-submit 🚨 🚨 🚨</h5>'
+      );
     } else {
       const input = $(this)
         .val("text")
@@ -124,8 +132,12 @@ $(document).ready(() => {
   //-----------------------------------------------------
 
   $(".scrollBtn").on("click", () => {
+    $("#errMsg").remove();
     $(".new-tweet").slideToggle(() => {
+      window.scrollTo(0, -10000);
       $("textarea").focus();
     });
   });
+
+  //-----------------------------------------------------
 });

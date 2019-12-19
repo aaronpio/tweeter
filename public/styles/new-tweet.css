@@ -2,6 +2,14 @@
   margin-top: 50px;
 }
 
+#errMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: darkred;
+}
+
 .new-tweet textarea {
   background-color: #f4f1ec;
   width: 100%;
