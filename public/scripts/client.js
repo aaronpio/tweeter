@@ -1,4 +1,6 @@
 $(document).ready(() => {
+  $("textarea").focus();
+
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -109,18 +111,21 @@ $(document).ready(() => {
 
       requestTweets("POST", "/tweets", input);
 
-      //clear the input field
+      //clear the input field and counter after "tweet" button press:
       $($(this).children()[0]).val("");
+      $(
+        $(this)
+          .children("div")
+          .children()[1]
+      ).text("140");
     }
   });
 
   //-----------------------------------------------------
 
-  // $(".scrollBtn").on("click", () => {
-  //   $("html, body").animate({
-  //     scrollTop: parseInt($(".new-tweet").offset().top)
-  //   });
-  // });
-
-  //need to work with this^^^^^^^^^^^^^^^^^^^^
+  $(".scrollBtn").on("click", () => {
+    $(".new-tweet").slideToggle(() => {
+      $("textarea").focus();
+    });
+  });
 });
