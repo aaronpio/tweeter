@@ -9,8 +9,6 @@ $(document).ready(() => {
 
   //----------------------------------------------
   const createTweetElement = tweetObj => {
-    //const timePosted = timeAgo(tweetObj.created_at);
-
     const htmlInjection = `
   <article>
      <header>
@@ -32,12 +30,14 @@ $(document).ready(() => {
 
   //-----------------------------------------------------
 
+  //called in requestTweet to prepend the new tweet to top of list
   const renderTweet = tweet => {
     let tweetElement = createTweetElement(tweet);
     $(".tweetList").prepend(tweetElement);
   };
   //-----------------------------------------------------
 
+  //called in requestTweets at startup to render all the tweets
   const renderTweets = tweets => {
     for (const tweet of tweets) {
       let tweetElement = createTweetElement(tweet);
@@ -69,6 +69,9 @@ $(document).ready(() => {
 
   //-----------------------------------------------------
   //Function can take in GET or POST requests and handle them with AJAX
+  //GET only called at startup to list all tweets
+  //POST called on new tweet form input to save tweet, as well as make a GET call to requestTweet that gets the new tweet, and ultimately renders it
+
   const requestTweets = (method, url, data) => {
     $.ajax({
       method,
@@ -80,6 +83,7 @@ $(document).ready(() => {
           //does nothing for POSTS, rendersTweets for GET
           renderTweets(result);
         } else {
+          //GET request here to ultimately render the new tweet
           requestTweet("GET", "/tweets");
         }
       })
@@ -91,14 +95,18 @@ $(document).ready(() => {
       });
   };
 
+  //Calls GET to list initial Database tweets at startup
   requestTweets("GET", "/tweets");
 
   //-----------------------------------------------------
 
+  //Remove error message with refocus on textarea
   $("#tweetForm").click(function() {
     $("#errMsg").remove();
   });
 
+  //Takes input and saves to database, then calls requestTweets with post to render jsut the new tweet
+  // Does Error handling of input (with jquery)
   $("#tweetForm").on("submit", function(event) {
     event.preventDefault();
     const charCountValue =
@@ -133,6 +141,7 @@ $(document).ready(() => {
 
   //-----------------------------------------------------
 
+  //Hides/shows new tweet form (also removes error(if any) for cleaner UI)
   $(".scrollBtn").on("click", () => {
     $("#errMsg").remove();
     $(".new-tweet").slideToggle(() => {
