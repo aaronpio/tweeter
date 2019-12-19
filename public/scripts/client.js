@@ -9,6 +9,8 @@ $(document).ready(() => {
 
   //----------------------------------------------
   const createTweetElement = tweetObj => {
+    //const timePosted = timeAgo(tweetObj.created_at);
+
     const htmlInjection = `
   <article>
      <header>

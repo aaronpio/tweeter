@@ -30,7 +30,7 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
-      created_at: Date.now()
+      created_at: Date().toString()
     };
 
     DataHelpers.saveTweet(tweet, err => {
