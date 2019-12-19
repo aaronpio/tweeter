@@ -1,6 +1,6 @@
-# TinyApp Project
+# Tweeter Project
 
-Tweeter is a like twitter-lite. It was an opportunity to practice my jQuery and responsive-CSS skills. Submit a tweet, and it is added to the database, as well as listed in real-time below the tweet form.
+Tweeter is our version of a Twitter-lite. It was an opportunity to practice my jQuery and responsive-CSS skills. Submit a tweet, and it is added to the database, as well as listed in real-time below the tweet form.
 
 ## Final Product
 
