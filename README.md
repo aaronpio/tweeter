@@ -6,13 +6,13 @@ Tweeter is a like twitter-lite. It was an opportunity to practice my jQuery and 
 
 #### Desktop Styling
 
-!["Desktop"](https://github.com/aaronpio/tinyapp/blob/master/docs/register-page.png?raw=true)
+!["Desktop"](https://github.com/aaronpio/tweeter/blob/master/public/docs/desktop-view.png?raw=true)
 
 #### -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Mobile/Tablet Styling
 
-!["Mobile-Tablet"](https://github.com/aaronpio/tinyapp/blob/master/docs/login-page.png?raw=true)
+!["Mobile-Tablet"](https://github.com/aaronpio/tweeter/blob/master/public/docs/mobile-tablet-view.png?raw=true)
 
 #### -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
