@@ -69,8 +69,8 @@ $(document).ready(() => {
 
   //-----------------------------------------------------
   //Function can take in GET or POST requests and handle them with AJAX
-  //GET only called at startup to list all tweets
-  //POST called on new tweet form input to save tweet, as well as make a GET call to requestTweet that gets the new tweet, and ultimately renders it
+  // - GET only called at startup to list all tweets
+  // - POST called on new tweet form input to save tweet, as well as make a GET call to requestTweet that gets the new tweet, and ultimately renders it
 
   const requestTweets = (method, url, data) => {
     $.ajax({
